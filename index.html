@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Financias • Painel Pessoal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand__logo">F</div>
+          <div>
+            <p class="brand__title">Financias</p>
+            <p class="brand__subtitle">Seu hub financeiro</p>
+          </div>
+        </div>
+        <nav class="menu">
+          <button class="menu__item is-active" data-section="dashboard">
+            Dashboard
+          </button>
+          <button class="menu__item" data-section="cartoes">
+            Cartões de crédito
+          </button>
+          <button class="menu__item" data-section="calendario">Calendário</button>
+          <button class="menu__item" data-section="contas">Contas bancárias</button>
+          <button class="menu__item" data-section="despesas">Despesas</button>
+          <button class="menu__item" data-section="entradas">Entradas</button>
+        </nav>
+        <div class="sidebar__footer">
+          <p class="sidebar__hint">Atualizado automaticamente</p>
+          <button class="btn btn--secondary">Adicionar conta</button>
+        </div>
+      </aside>
+
+      <main class="content">
+        <header class="content__header">
+          <div>
+            <p class="content__eyebrow">Organização financeira</p>
+            <h1 class="content__title">Bem-vindo(a) à sua central financeira</h1>
+          </div>
+          <button class="btn btn--primary">Nova movimentação</button>
+        </header>
+
+        <section class="panel is-visible" data-section="dashboard">
+          <div class="grid grid--3">
+            <article class="card highlight">
+              <p class="card__eyebrow">Saldo consolidado</p>
+              <h2 class="card__value">R$ 18.920,35</h2>
+              <p class="card__delta positivo">+8% vs último mês</p>
+            </article>
+            <article class="card">
+              <p class="card__eyebrow">Receitas no mês</p>
+              <h2 class="card__value">R$ 9.400,00</h2>
+              <p class="card__delta positivo">+R$ 1.250</p>
+            </article>
+            <article class="card">
+              <p class="card__eyebrow">Despesas no mês</p>
+              <h2 class="card__value">R$ 7.150,00</h2>
+              <p class="card__delta negativo">-R$ 320</p>
+            </article>
+          </div>
+
+          <div class="grid grid--2">
+            <article class="card chart">
+              <header>
+                <h3>Evolução mensal</h3>
+                <span class="badge">Últimos 6 meses</span>
+              </header>
+              <div class="chart__bars">
+                <div class="bar" style="--value: 65%"><span>Mar</span></div>
+                <div class="bar" style="--value: 72%"><span>Abr</span></div>
+                <div class="bar" style="--value: 80%"><span>Mai</span></div>
+                <div class="bar" style="--value: 58%"><span>Jun</span></div>
+                <div class="bar" style="--value: 84%"><span>Jul</span></div>
+                <div class="bar" style="--value: 90%"><span>Ago</span></div>
+              </div>
+            </article>
+
+            <article class="card list">
+              <header>
+                <h3>Metas e lembretes</h3>
+                <button class="btn btn--ghost">Ver todas</button>
+              </header>
+              <ul>
+                <li>
+                  <div>
+                    <p class="list__title">Reserva de emergência</p>
+                    <p class="list__subtitle">70% da meta de R$ 20k</p>
+                  </div>
+                  <span class="badge">Em progresso</span>
+                </li>
+                <li>
+                  <div>
+                    <p class="list__title">Pagamento IPVA</p>
+                    <p class="list__subtitle">Vence em 12/09</p>
+                  </div>
+                  <span class="badge badge--warning">Em 7 dias</span>
+                </li>
+                <li>
+                  <div>
+                    <p class="list__title">Investir 15% da renda</p>
+                    <p class="list__subtitle">9% acumulado este mês</p>
+                  </div>
+                  <span class="badge badge--info">Planejar</span>
+                </li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel" data-section="cartoes">
+          <header class="panel__header">
+            <div>
+              <p class="panel__eyebrow">Seus cartões ativos</p>
+              <h2>Cartões de crédito</h2>
+            </div>
+            <button class="btn btn--ghost">Gerenciar limites</button>
+          </header>
+          <div class="grid grid--2">
+            <article class="card card--horizontal">
+              <div>
+                <p class="card__eyebrow">Visa • Final 9832</p>
+                <h3>Limite total: R$ 12.000</h3>
+                <p class="card__subtitle">Utilizado R$ 4.560 (38%)</p>
+              </div>
+              <span class="pill pill--green">Pontual</span>
+            </article>
+            <article class="card card--horizontal">
+              <div>
+                <p class="card__eyebrow">Master • Final 4418</p>
+                <h3>Limite total: R$ 8.500</h3>
+                <p class="card__subtitle">Utilizado R$ 6.900 (81%)</p>
+              </div>
+              <span class="pill pill--orange">Atenção</span>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel" data-section="calendario">
+          <header class="panel__header">
+            <div>
+              <p class="panel__eyebrow">Agenda financeira</p>
+              <h2>Calendário inteligente</h2>
+            </div>
+            <button class="btn btn--ghost">Adicionar lembrete</button>
+          </header>
+          <div class="calendar">
+            <div class="calendar__day is-today">
+              <p>Hoje</p>
+              <strong>08 AGO</strong>
+              <span>3 lembretes</span>
+            </div>
+            <div class="calendar__day">
+              <p>Qua</p>
+              <strong>09 AGO</strong>
+              <span>1 lançamento</span>
+            </div>
+            <div class="calendar__day">
+              <p>Qui</p>
+              <strong>10 AGO</strong>
+              <span>Investimento</span>
+            </div>
+            <div class="calendar__day">
+              <p>Sex</p>
+              <strong>11 AGO</strong>
+              <span>Conta luz</span>
+            </div>
+            <div class="calendar__day">
+              <p>Sab</p>
+              <strong>12 AGO</strong>
+              <span>Livres</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel" data-section="contas">
+          <header class="panel__header">
+            <div>
+              <p class="panel__eyebrow">Instituições conectadas</p>
+              <h2>Contas bancárias</h2>
+            </div>
+            <button class="btn btn--ghost">Sincronizar</button>
+          </header>
+          <div class="grid grid--2">
+            <article class="card">
+              <p class="card__eyebrow">Banco Horizonte</p>
+              <h3>Conta corrente</h3>
+              <p class="card__value">R$ 6.780,00</p>
+              <p class="card__subtitle">Atualizado há 2h</p>
+            </article>
+            <article class="card">
+              <p class="card__eyebrow">Nuvem Bank</p>
+              <h3>Conta digital</h3>
+              <p class="card__value">R$ 3.420,00</p>
+              <p class="card__subtitle">Atualizado há 15min</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel" data-section="despesas">
+          <header class="panel__header">
+            <div>
+              <p class="panel__eyebrow">Controle total</p>
+              <h2>Despesas recentes</h2>
+            </div>
+            <button class="btn btn--ghost">Exportar CSV</button>
+          </header>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Data</th>
+                <th>Categoria</th>
+                <th>Descrição</th>
+                <th class="align-right">Valor</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>05/08</td>
+                <td>Moradia</td>
+                <td>Aluguel apartamento</td>
+                <td class="align-right negativo">-R$ 2.200,00</td>
+              </tr>
+              <tr>
+                <td>06/08</td>
+                <td>Transporte</td>
+                <td>Combustível</td>
+                <td class="align-right negativo">-R$ 280,00</td>
+              </tr>
+              <tr>
+                <td>07/08</td>
+                <td>Mercado</td>
+                <td>Compras semanais</td>
+                <td class="align-right negativo">-R$ 430,00</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="panel" data-section="entradas">
+          <header class="panel__header">
+            <div>
+              <p class="panel__eyebrow">Recebimentos</p>
+              <h2>Entradas confirmadas</h2>
+            </div>
+            <button class="btn btn--ghost">Adicionar receita</button>
+          </header>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Data</th>
+                <th>Origem</th>
+                <th>Status</th>
+                <th class="align-right">Valor</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>01/08</td>
+                <td>Salário CLT</td>
+                <td><span class="pill pill--green">Confirmado</span></td>
+                <td class="align-right positivo">R$ 6.800,00</td>
+              </tr>
+              <tr>
+                <td>04/08</td>
+                <td>Freelancer UX</td>
+                <td><span class="pill pill--blue">Previsto</span></td>
+                <td class="align-right positivo">R$ 1.700,00</td>
+              </tr>
+              <tr>
+                <td>07/08</td>
+                <td>Aluguel sala</td>
+                <td><span class="pill pill--green">Confirmado</span></td>
+                <td class="align-right positivo">R$ 900,00</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
